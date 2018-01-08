@@ -4,8 +4,8 @@
 # Edit variables according to configuration needs
 vmName = "Vagrant Base"
 vmBoxName = "debian/jessie64"
-sourcecodePath = "./sourcecode"
-vagrantRootPath = "/home/vagrant/sourcecode"
+sourcecodePath = "./app"
+vagrantRootPath = "/home/vagrant/app"
 provisioningScriptPath = "./provisioning/bootstrap_base.sh"
 vmMemory = "1024"
 
