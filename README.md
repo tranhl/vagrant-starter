@@ -18,7 +18,9 @@ Finally, delete the project's `.git` folder and set up your own:
 rm -rf .git && git init
 ```
 
-Once all of the above is done, `vagrant up`!
+Once all of the above is done, `vagrant up`! You should now be able to access the Vagrant box through its private IP address (default is `192.168.10.10`).
+
+**Avoid using port-fowarding to access the Vagrant box through `localhost`!** Doing so will cause your CPU to gradually increase to 100% until you shut down the box (see https://www.virtualbox.org/ticket/14137).
 
 ## License
 [MIT](http://vjpr.mit-license.org)
