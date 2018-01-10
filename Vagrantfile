@@ -7,13 +7,14 @@ vmBoxName = "debian/jessie64"
 sourcecodePath = "./app"
 vagrantRootPath = "/home/vagrant/app"
 provisioningScriptPath = "./provisioning/bootstrap_base.sh"
+vmPrivateNetworkAddress = "192.168.10.10"
 vmMemory = "1024"
 
 Vagrant.configure("2") do |config|
     config.vm.box = vmBoxName
     config.ssh.username = "vagrant"
 
-    config.vm.network "private_network", ip: "192.168.10.10"
+    config.vm.network "private_network", ip: vmPrivateNetworkAddress
     config.vm.provider "virtualbox" do |vb|
         vb.memory = vmMemory
         vb.name = vmName
