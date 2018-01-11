@@ -9,6 +9,8 @@ sudo apt-get install -y build-essential
 sudo apt-get install -y nfs-common portmap
 sudo apt-get install -y wget
 sudo apt-get install -y curl
+sudo apt-get install cachefilesd
+sudo echo "RUN=yes" > /etc/default/cachefilesd
 
 # Platform specific provisioning
 echo 'Installing Node.js and npm...'
