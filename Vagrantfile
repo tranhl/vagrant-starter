@@ -20,6 +20,6 @@ Vagrant.configure("2") do |config|
         vb.name = vmName
     end
 
-    config.vm.synced_folder sourcecodePath, vagrantRootPath, type: "nfs"
+    config.vm.synced_folder sourcecodePath, vagrantRootPath, type: "nfs", mount_options: ['rw', 'vers=3', 'tcp', 'fsc' ,'actimeo=1']
     config.vm.provision :shell, privileged: false, path: provisioningScriptPath
 end
